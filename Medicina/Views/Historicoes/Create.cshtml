@@ -1,0 +1,125 @@
+﻿@model Medicina.Models.Historicoes
+
+@{
+    ViewData["Title"] = "Crear nuevo historico";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<hr />
+
+<form asp-action="Create">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Nombre" class="control-label"></label>
+                <input asp-for="Nombre" class="form-control" />
+                <span asp-validation-for="Nombre" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Apellido" class="control-label"></label>
+                <input asp-for="Apellido" class="form-control" />
+                <span asp-validation-for="Apellido" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="NumeroIdentificacion" class="control-label"></label>
+                <input asp-for="NumeroIdentificacion" class="form-control" />
+                <span asp-validation-for="NumeroIdentificacion" class="text-danger"></span>
+            </div>
+        </div>
+    
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="AntecendesPersonales" class="control-label"></label>
+                <input asp-for="AntecendesPersonales" class="form-control" />
+                <span asp-validation-for="AntecendesPersonales" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="MotivoConsulta" class="control-label"></label>
+                <input asp-for="MotivoConsulta" class="form-control" />
+                <span asp-validation-for="MotivoConsulta" class="text-danger"></span>
+            </div>
+        </div>
+
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="ExamenFisico" class="control-label"></label>
+                    <input asp-for="ExamenFisico" class="form-control" />
+                    <span asp-validation-for="ExamenFisico" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="TratamientosOEstudios" class="control-label"></label>
+                <input asp-for="TratamientosOEstudios" class="form-control" />
+                <span asp-validation-for="TratamientosOEstudios" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="ResultadoLaboratorio" class="control-label"></label>
+                <input asp-for="ResultadoLaboratorio" class="form-control" />
+                <span asp-validation-for="ResultadoLaboratorio" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="Indicaciones" class="control-label"></label>
+                <input asp-for="Indicaciones" class="form-control" />
+                <span asp-validation-for="Indicaciones" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <label asp-for="FechaHoy" class="control-label"></label>
+                <input asp-for="FechaHoy" class="form-control" />
+                <span asp-validation-for="FechaHoy" class="text-danger"></span>
+            </div>
+        </div>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <label asp-for="FechaVolver" class="control-label"></label>
+                    <input asp-for="FechaVolver" class="form-control" />
+                    <span asp-validation-for="FechaVolver" class="text-danger"></span>
+                </div>
+            </div>
+
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label asp-for="FechaPrimeraVez" class="control-label"></label>
+                        <input asp-for="FechaPrimeraVez" class="form-control" />
+                        <span asp-validation-for="FechaPrimeraVez" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+</form>
+
+
+<div>
+    <a asp-action="Index">Volver atrás</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

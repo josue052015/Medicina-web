@@ -1,0 +1,113 @@
+﻿@model IEnumerable<Medicina.Models.Pacientes>
+
+@{
+    ViewData["Title"] = "Pacientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<p>
+    <a asp-action="Create">Crear nuevo paciente</a>
+</p>
+<div class="content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+           
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <tr>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Nombre)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.Apellido)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.NumeroIdentificacion)
+                                        </th>
+                                        @*<th>
+                                            @Html.DisplayNameFor(model => model.TelefonoCasa)
+                                        </th>*@
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.TelefonoCelular)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.FechaNacimiento)
+                                        </th>
+                                        @*<th>
+                                            @Html.DisplayNameFor(model => model.Edad)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.FechaPrimeraVez)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.IdentificacionNavigation)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.SexoNavigation)
+                                        </th>
+                                        <th>
+                                            @Html.DisplayNameFor(model => model.TipoSeguroNavigation)
+                                        </th>*@
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model)
+                                    {
+                                        <tr>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Nombre)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.Apellido)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.NumeroIdentificacion)
+                                            </td>
+                                            @*<td>
+                                                @Html.DisplayFor(modelItem => item.TelefonoCasa)
+                                            </td>*@
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TelefonoCelular)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaNacimiento)
+                                            </td>
+                                            @*<td>
+                                                @Html.DisplayFor(modelItem => item.Edad)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.FechaPrimeraVez)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.IdentificacionNavigation.IdentificacionId)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.SexoNavigation.SexoId)
+                                            </td>
+                                            <td>
+                                                @Html.DisplayFor(modelItem => item.TipoSeguroNavigation.TipoSeguroId)
+                                            </td>*@
+                                            <td>
+                                                <a asp-action="Edit" asp-route-id="@item.PacienteId">Editar</a> |
+                                                <a asp-action="Details" asp-route-id="@item.PacienteId">Detalles</a> |
+                                                <a asp-action="Delete" asp-route-id="@item.PacienteId">Eliminar</a>
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+

@@ -1,0 +1,93 @@
+﻿@model Medicina.Models.Historicoes
+
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Desea eliminar el siguiente historico?</h3>
+<div>
+
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Apellido)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Apellido)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroIdentificacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.NumeroIdentificacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.AntecendesPersonales)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.AntecendesPersonales)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.MotivoConsulta)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.MotivoConsulta)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ExamenFisico)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ExamenFisico)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.TratamientosOEstudios)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.TratamientosOEstudios)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.ResultadoLaboratorio)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.ResultadoLaboratorio)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.Indicaciones)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Indicaciones)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaHoy)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaHoy)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaVolver)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaVolver)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.FechaPrimeraVez)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.FechaPrimeraVez)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="HistoricoId" />
+        <input type="submit" value="Eliminar" class="btn btn-default" /> |
+        <a asp-action="Index">Volver atrás</a>
+    </form>
+</div>

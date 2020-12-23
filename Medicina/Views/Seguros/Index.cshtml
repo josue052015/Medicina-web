@@ -1,0 +1,34 @@
+﻿@model IEnumerable<Medicina.Models.Seguros>
+
+@{
+    ViewData["Title"] = "Seguros";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<p>
+    <a asp-action="Create">Crear nuevo seguro</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Seguro1)
+                </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Seguro1)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.TipoSeguroId">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.TipoSeguroId">Detalles</a> |
+                <a asp-action="Delete" asp-route-id="@item.TipoSeguroId">Eliminar</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

@@ -1,0 +1,112 @@
+﻿@model IEnumerable<Medicina.Models.Historicoes>
+
+@{
+    ViewData["Title"] = "Consultas de pacientes";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@*<h2>Consulta</h2>*@
+
+@using (Html.BeginForm("consulta", "Historicoes", FormMethod.Get))
+{
+    <p>
+        Busqueda por No. de Identificacion: @Html.TextBox("Numero_Identificacion", "", new { @class = "form-control" }) <br />
+        @ViewBag.error <br />
+        <input type="submit" value="Buscar" class="btn btn-info" />
+    </p>
+}
+
+<div class="table-responsive">
+    <table class="table">
+        <thead class="text-primary">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nombre)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Apellido)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.NumeroIdentificacion)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.AntecendesPersonales)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.MotivoConsulta)
+                </th>
+                @* <th>
+            @Html.DisplayNameFor(model => model.ExamenFisico)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TratamientosOEstudios)
+        </th>
+        <th>
+                @Html.DisplayNameFor(model => model.ResultadoLaboratorio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Indicaciones)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaHoy)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaVolver)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FechaPrimeraVez)
+            </th>*@
+                <th></th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nombre)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Apellido)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NumeroIdentificacion)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AntecendesPersonales)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MotivoConsulta)
+                </td>
+                @*<td>
+            @Html.DisplayFor(modelItem => item.ExamenFisico)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TratamientosOEstudios)
+        </td>
+        <td>
+                @Html.DisplayFor(modelItem => item.ResultadoLaboratorio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Indicaciones)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaHoy)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaVolver)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FechaPrimeraVez)
+            </td>*@
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.HistoricoId">Editar</a> |
+                    <a asp-action="Details" asp-route-id="@item.HistoricoId">Detalles</a> |
+                    <a asp-action="Delete" asp-route-id="@item.HistoricoId">Eliminar</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+</div>

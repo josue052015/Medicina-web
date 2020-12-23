@@ -1,0 +1,11 @@
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\bin\Debug\netcoreapp2.0\Medicina.deps.json
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\bin\Debug\netcoreapp2.0\Medicina.runtimeconfig.json
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\bin\Debug\netcoreapp2.0\Medicina.runtimeconfig.dev.json
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\bin\Debug\netcoreapp2.0\Medicina.dll
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\bin\Debug\netcoreapp2.0\Medicina.pdb
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\obj\Debug\netcoreapp2.0\Medicina.csproj.CoreCompileInputs.cache
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\obj\Debug\netcoreapp2.0\Medicina.AssemblyInfoInputs.cache
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\obj\Debug\netcoreapp2.0\Medicina.AssemblyInfo.cs
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\obj\Debug\netcoreapp2.0\Medicina.dll
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\obj\Debug\netcoreapp2.0\Medicina.pdb
+C:\Users\Inspiron\Desktop\itla\Asp .net\ProyectoFinal\Medicina\Medicina\obj\Debug\netcoreapp2.0\Medicina.csprojAssemblyReference.cache

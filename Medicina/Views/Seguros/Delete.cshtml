@@ -1,0 +1,27 @@
+﻿@model Medicina.Models.Seguros
+
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<h3>Desea eliminar el siguiente seguro?</h3>
+<div>
+    <h4>Seguros</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Seguro1)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.Seguro1)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="TipoSeguroId" />
+        <input type="submit" value="Eliminar" class="btn btn-default" /> |
+        <a asp-action="Index">Volver atrás</a>
+    </form>
+</div>
